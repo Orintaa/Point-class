@@ -4,15 +4,15 @@ class Point {
         this._pointX = _pointX;
         this._pointY = _pointY;
         this.distanceFromOrigin = () => {
-            return Math.sqrt(this._pointX * this._pointX + this._pointY * this._pointY);
+            return Math.sqrt(this._pointX * this._pointX + this._pointY * this._pointY); //arba this._pointX ** 2 galima uzrasyti
         };
         this.translate = (dx, dy) => {
             this._pointX += dx;
             this._pointY += dy;
         };
         this.distance = (p) => {
-            return Math.sqrt((this._pointX - p._pointX) ** 2 +
-                (this._pointY - p._pointY) ** 2);
+            return Math.sqrt((p._pointX - this._pointX) ** 2 +
+                (p._pointY - this._pointY) ** 2);
         };
     }
     get pointX() {
