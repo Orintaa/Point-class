@@ -22,7 +22,7 @@ class Point {
     }
 
     public toString():string {
-        return this.pointX+' '+this._pointY;
+        return '['+this.pointX+';'+this._pointY+']';
     }
 
     public distanceFromOrigin = (p:Point) => {
@@ -47,8 +47,8 @@ const o2 = new Point(2,4);
 
 // console.log(o1.toString());
 // o1.translate(2, 1)
-// console.log(o1.toString());
+console.log(o1.toString());
 // o2.translate(2, 3)
 // console.log(o2.toString());
 // o1.distance(o2);
-console.log(o1.distance(o2));
+// console.log(o1.distance(o2));
