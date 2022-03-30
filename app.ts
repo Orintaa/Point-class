@@ -25,8 +25,8 @@ class Point {
         return '['+this.pointX+';'+this._pointY+']';
     }
 
-    public distanceFromOrigin = (p:Point) => {
-        return Math.sqrt(p._pointX*p._pointX+p._pointY*p._pointY);
+    public distanceFromOrigin = () => {
+        return Math.sqrt(this._pointX*this._pointX+this._pointY*this._pointY);
     }
 
     public translate = (dx:number, dy:number) => {
@@ -35,15 +35,15 @@ class Point {
     }
 
     public distance = (p:Point) => {
-        return Math.sqrt((this._pointX - p._pointX)*(this._pointX - p._pointX) +
-        (this._pointY - p._pointY)*(this._pointY - p._pointY))
+        return Math.sqrt((this._pointX - p._pointX)**2 +
+        (this._pointY - p._pointY)**2)
     }
 
 }
 
-const o1 = new Point(5, 3);
+const o1 = new Point(5, 5);
 const o2 = new Point(2,4);
-// console.log(o1.distanceFromOrigin());
+console.log(o1.distanceFromOrigin());
 
 // console.log(o1.toString());
 // o1.translate(2, 1)
@@ -51,4 +51,4 @@ console.log(o1.toString());
 // o2.translate(2, 3)
 // console.log(o2.toString());
 // o1.distance(o2);
-// console.log(o1.distance(o2));
+console.log(o1.distance(o2));
