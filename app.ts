@@ -26,7 +26,7 @@ class Point {
     }
 
     public distanceFromOrigin = () => {
-        return Math.sqrt(this._pointX*this._pointX+this._pointY*this._pointY);
+        return Math.sqrt(this._pointX*this._pointX+this._pointY*this._pointY); //arba this._pointX ** 2 galima uzrasyti
     }
 
     public translate = (dx:number, dy:number) => {
@@ -35,8 +35,8 @@ class Point {
     }
 
     public distance = (p:Point) => {
-        return Math.sqrt((this._pointX - p._pointX)**2 +
-        (this._pointY - p._pointY)**2)
+        return Math.sqrt((p._pointX - this._pointX)**2 +
+        (p._pointY - this._pointY)**2)
     }
 
 }
