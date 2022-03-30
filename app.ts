@@ -22,7 +22,7 @@ class Point {
     }
 
     public toString():string {
-        return '['+this.pointX+';'+this._pointY+']';
+        return '['+this._pointX+';'+this._pointY+']';
     }
 
     public distanceFromOrigin = () => {
